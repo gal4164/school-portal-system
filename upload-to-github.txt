@@ -1,0 +1,45 @@
+========================================
+COMMANDS TO UPLOAD TO GITHUB
+========================================
+
+STEP 1: Create a new repository on GitHub
+-----------------------------------------
+1. Go to: https://github.com
+2. Click the "+" icon (top-right)
+3. Click "New repository"
+4. Name it: school-portal-system
+5. Choose Public or Private
+6. DO NOT check "Initialize with README"
+7. Click "Create repository"
+
+
+STEP 2: Copy these commands and run them
+-----------------------------------------
+Replace YOUR-USERNAME with your actual GitHub username!
+
+git remote add origin https://github.com/YOUR-USERNAME/school-portal-system.git
+git branch -M main
+git push -u origin main
+
+
+EXAMPLE (if your username is "john123"):
+-----------------------------------------
+git remote add origin https://github.com/john123/school-portal-system.git
+git branch -M main
+git push -u origin main
+
+
+STEP 3: When asked for credentials
+-----------------------------------------
+Username: [Your GitHub username]
+Password: [Use Personal Access Token - see GITHUB_UPLOAD_GUIDE.md]
+
+
+========================================
+THAT'S IT! Your project will be on GitHub!
+========================================
+
+Your repository URL will be:
+https://github.com/YOUR-USERNAME/school-portal-system
+
+For detailed instructions, see: GITHUB_UPLOAD_GUIDE.md
