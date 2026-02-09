@@ -1,0 +1,95 @@
+========================================
+TEACHER-STUDENT COMMUNICATION PORTAL
+========================================
+
+CURRENT STATUS:
+✅ Dependencies installed
+✅ Environment file created
+✅ Port changed to 3001
+❌ MySQL not installed yet
+
+========================================
+WHAT YOU NEED TO DO:
+========================================
+
+STEP 1: Install MySQL Database
+-------------------------------
+Choose ONE option:
+
+OPTION A - MySQL (Professional):
+1. Download from: https://dev.mysql.com/downloads/installer/
+2. Install MySQL
+3. Remember your root password!
+
+OPTION B - XAMPP (Easier for beginners):
+1. Download from: https://www.apachefriends.org/
+2. Install XAMPP
+3. Open XAMPP Control Panel
+4. Click "Start" next to MySQL
+
+STEP 2: Configure Database Password
+------------------------------------
+1. Open the file: .env (use Notepad)
+2. Find the line: DB_PASSWORD=your_password
+3. Change it to:
+   - If using MySQL: DB_PASSWORD=your_mysql_password
+   - If using XAMPP: DB_PASSWORD= (leave empty)
+
+STEP 3: Setup Database
+----------------------
+Open Command Prompt in this folder and run:
+
+    npm run setup
+
+This creates the database and tables.
+
+STEP 4: Start the Server
+-------------------------
+Run this command:
+
+    npm start
+
+You should see: "Server running on port 3001"
+
+STEP 5: Open in Browser
+------------------------
+Go to: http://localhost:3001
+
+Login with:
+Email: admin@school.com
+Password: Admin@123
+
+========================================
+TROUBLESHOOTING:
+========================================
+
+Problem: "Cannot connect to database"
+Solution: Make sure MySQL is running
+         Check password in .env file
+
+Problem: "Port already in use"
+Solution: Port is now 3001 instead of 3000
+
+Problem: "npm command not found"
+Solution: Install Node.js from nodejs.org
+
+========================================
+DOCUMENTATION:
+========================================
+
+Read these files for more help:
+- SETUP_INSTRUCTIONS.md - Detailed setup guide
+- QUICK_START.md - Quick start guide
+- documentation/USER_MANUAL.md - How to use
+- documentation/INSTALLATION_GUIDE.md - Full installation
+
+========================================
+NEED HELP?
+========================================
+
+1. Check SETUP_INSTRUCTIONS.md
+2. Make sure MySQL is installed and running
+3. Verify .env file has correct password
+4. Try XAMPP if MySQL installation fails
+
+========================================

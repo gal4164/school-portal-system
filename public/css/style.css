@@ -1,0 +1,585 @@
+/* ========================================
+   BEAUTIFUL COLOR SCHEME - SCHOOL PORTAL
+   ======================================== */
+
+:root {
+    /* Admin Theme - Professional Purple/Blue */
+    --admin-primary: #6366f1;
+    --admin-secondary: #8b5cf6;
+    --admin-accent: #a78bfa;
+    --admin-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    --admin-light: #f5f3ff;
+    
+    /* Teacher Theme - Warm Orange/Coral */
+    --teacher-primary: #f59e0b;
+    --teacher-secondary: #f97316;
+    --teacher-accent: #fb923c;
+    --teacher-bg: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --teacher-light: #fff7ed;
+    
+    /* Student Theme - Cool Blue/Teal */
+    --student-primary: #06b6d4;
+    --student-secondary: #0ea5e9;
+    --student-accent: #22d3ee;
+    --student-bg: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    --student-light: #ecfeff;
+    
+    /* Common Colors */
+    --success-color: #10b981;
+    --danger-color: #ef4444;
+    --warning-color: #f59e0b;
+    --info-color: #3b82f6;
+    
+    /* Neutral Colors */
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+}
+
+/* ========================================
+   GLOBAL STYLES
+   ======================================== */
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-800);
+}
+
+/* ========================================
+   NAVBAR STYLES (Role-Based)
+   ======================================== */
+
+/* Admin Navbar */
+body[data-role="admin"] .navbar {
+    background: var(--admin-bg) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Teacher Navbar */
+body[data-role="teacher"] .navbar {
+    background: var(--teacher-bg) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+/* Student Navbar */
+body[data-role="student"] .navbar {
+    background: var(--student-bg) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================================
+   SIDEBAR STYLES (Role-Based)
+   ======================================== */
+
+.sidebar {
+    position: fixed;
+    top: 56px;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    padding: 20px 0;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+/* Admin Sidebar */
+body[data-role="admin"] .sidebar {
+    background: linear-gradient(180deg, var(--admin-light) 0%, #ffffff 100%);
+}
+
+body[data-role="admin"] .sidebar .nav-link {
+    color: var(--gray-700);
+    padding: 12px 20px;
+    margin: 4px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+body[data-role="admin"] .sidebar .nav-link:hover {
+    background: var(--admin-primary);
+    color: white;
+    transform: translateX(5px);
+}
+
+body[data-role="admin"] .sidebar .nav-link.active {
+    background: var(--admin-primary);
+    color: white;
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
+}
+
+/* Teacher Sidebar */
+body[data-role="teacher"] .sidebar {
+    background: linear-gradient(180deg, var(--teacher-light) 0%, #ffffff 100%);
+}
+
+body[data-role="teacher"] .sidebar .nav-link {
+    color: var(--gray-700);
+    padding: 12px 20px;
+    margin: 4px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+body[data-role="teacher"] .sidebar .nav-link:hover {
+    background: var(--teacher-primary);
+    color: white;
+    transform: translateX(5px);
+}
+
+body[data-role="teacher"] .sidebar .nav-link.active {
+    background: var(--teacher-primary);
+    color: white;
+    box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);
+}
+
+/* Student Sidebar */
+body[data-role="student"] .sidebar {
+    background: linear-gradient(180deg, var(--student-light) 0%, #ffffff 100%);
+}
+
+body[data-role="student"] .sidebar .nav-link {
+    color: var(--gray-700);
+    padding: 12px 20px;
+    margin: 4px 10px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+body[data-role="student"] .sidebar .nav-link:hover {
+    background: var(--student-primary);
+    color: white;
+    transform: translateX(5px);
+}
+
+body[data-role="student"] .sidebar .nav-link.active {
+    background: var(--student-primary);
+    color: white;
+    box-shadow: 0 4px 6px rgba(6, 182, 212, 0.3);
+}
+
+/* ========================================
+   MAIN CONTENT AREA
+   ======================================== */
+
+main {
+    margin-top: 56px;
+    padding: 30px;
+    min-height: calc(100vh - 56px);
+}
+
+/* Admin Main Background */
+body[data-role="admin"] main {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.03) 0%, rgba(139, 92, 246, 0.03) 100%);
+}
+
+/* Teacher Main Background */
+body[data-role="teacher"] main {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.03) 0%, rgba(249, 115, 22, 0.03) 100%);
+}
+
+/* Student Main Background */
+body[data-role="student"] main {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.03) 0%, rgba(14, 165, 233, 0.03) 100%);
+}
+
+/* ========================================
+   CARD STYLES
+   ======================================== */
+
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Stat Cards with Role Colors */
+body[data-role="admin"] .stat-card {
+    border-left: 4px solid var(--admin-primary);
+    background: linear-gradient(135deg, white 0%, var(--admin-light) 100%);
+}
+
+body[data-role="teacher"] .stat-card {
+    border-left: 4px solid var(--teacher-primary);
+    background: linear-gradient(135deg, white 0%, var(--teacher-light) 100%);
+}
+
+body[data-role="student"] .stat-card {
+    border-left: 4px solid var(--student-primary);
+    background: linear-gradient(135deg, white 0%, var(--student-light) 100%);
+}
+
+.stat-card h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+/* ========================================
+   BUTTON STYLES (Role-Based)
+   ======================================== */
+
+/* Admin Buttons */
+body[data-role="admin"] .btn-primary {
+    background: var(--admin-primary);
+    border: none;
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.3);
+    transition: all 0.3s ease;
+}
+
+body[data-role="admin"] .btn-primary:hover {
+    background: var(--admin-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(99, 102, 241, 0.4);
+}
+
+/* Teacher Buttons */
+body[data-role="teacher"] .btn-primary {
+    background: var(--teacher-primary);
+    border: none;
+    box-shadow: 0 4px 6px rgba(245, 158, 11, 0.3);
+    transition: all 0.3s ease;
+}
+
+body[data-role="teacher"] .btn-primary:hover {
+    background: var(--teacher-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(245, 158, 11, 0.4);
+}
+
+/* Student Buttons */
+body[data-role="student"] .btn-primary {
+    background: var(--student-primary);
+    border: none;
+    box-shadow: 0 4px 6px rgba(6, 182, 212, 0.3);
+    transition: all 0.3s ease;
+}
+
+body[data-role="student"] .btn-primary:hover {
+    background: var(--student-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(6, 182, 212, 0.4);
+}
+
+/* ========================================
+   MESSAGE & NOTIFICATION STYLES
+   ======================================== */
+
+.message-item {
+    border-left: 3px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.message-item:hover {
+    background-color: var(--gray-50);
+    transform: translateX(5px);
+}
+
+body[data-role="admin"] .message-item:hover {
+    border-left-color: var(--admin-primary);
+}
+
+body[data-role="teacher"] .message-item:hover {
+    border-left-color: var(--teacher-primary);
+}
+
+body[data-role="student"] .message-item:hover {
+    border-left-color: var(--student-primary);
+}
+
+.message-item.unread {
+    background: linear-gradient(90deg, rgba(59, 130, 246, 0.1) 0%, transparent 100%);
+    font-weight: 600;
+    border-left-width: 4px;
+}
+
+body[data-role="admin"] .message-item.unread {
+    border-left-color: var(--admin-primary);
+}
+
+body[data-role="teacher"] .message-item.unread {
+    border-left-color: var(--teacher-primary);
+}
+
+body[data-role="student"] .message-item.unread {
+    border-left-color: var(--student-primary);
+}
+
+.notification-item {
+    border-bottom: 1px solid var(--gray-200);
+    padding: 15px;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.notification-item:hover {
+    background-color: var(--gray-50);
+    transform: translateX(5px);
+}
+
+.notification-item.unread {
+    background: linear-gradient(90deg, rgba(251, 191, 36, 0.15) 0%, transparent 100%);
+    border-left: 4px solid var(--warning-color);
+}
+
+/* ========================================
+   ASSIGNMENT CARDS
+   ======================================== */
+
+.assignment-card {
+    border-left: 4px solid var(--warning-color);
+    border-radius: 12px;
+}
+
+.assignment-card.submitted {
+    border-left-color: var(--success-color);
+    background: linear-gradient(135deg, white 0%, rgba(16, 185, 129, 0.05) 100%);
+}
+
+.assignment-card.overdue {
+    border-left-color: var(--danger-color);
+    background: linear-gradient(135deg, white 0%, rgba(239, 68, 68, 0.05) 100%);
+}
+
+/* ========================================
+   BADGE STYLES
+   ======================================== */
+
+.badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.badge-notification {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* ========================================
+   TABLE STYLES
+   ======================================== */
+
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background: var(--gray-100);
+    font-weight: 600;
+}
+
+body[data-role="admin"] .table thead {
+    background: var(--admin-light);
+}
+
+body[data-role="teacher"] .table thead {
+    background: var(--teacher-light);
+}
+
+body[data-role="student"] .table thead {
+    background: var(--student-light);
+}
+
+.table tbody tr {
+    transition: all 0.3s ease;
+}
+
+.table tbody tr:hover {
+    background: var(--gray-50);
+    transform: scale(1.01);
+}
+
+/* ========================================
+   MODAL STYLES
+   ======================================== */
+
+.modal-content {
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header {
+    border-bottom: 2px solid var(--gray-100);
+    border-radius: 16px 16px 0 0;
+}
+
+body[data-role="admin"] .modal-header {
+    background: var(--admin-light);
+}
+
+body[data-role="teacher"] .modal-header {
+    background: var(--teacher-light);
+}
+
+body[data-role="student"] .modal-header {
+    background: var(--student-light);
+}
+
+/* ========================================
+   FORM STYLES
+   ======================================== */
+
+.form-control, .form-select {
+    border: 2px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--info-color);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+body[data-role="admin"] .form-control:focus,
+body[data-role="admin"] .form-select:focus {
+    border-color: var(--admin-primary);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+body[data-role="teacher"] .form-control:focus,
+body[data-role="teacher"] .form-select:focus {
+    border-color: var(--teacher-primary);
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+body[data-role="student"] .form-control:focus,
+body[data-role="student"] .form-select:focus {
+    border-color: var(--student-primary);
+    box-shadow: 0 0 0 3px rgba(6, 182, 212, 0.1);
+}
+
+/* ========================================
+   HERO SECTION (Landing Page)
+   ======================================== */
+
+.hero {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+   ======================================== */
+
+@media (max-width: 768px) {
+    .sidebar {
+        position: relative;
+        top: 0;
+    }
+    
+    main {
+        margin-top: 0;
+        padding: 15px;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+}
+
+/* ========================================
+   SCROLLBAR STYLING
+   ======================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-700);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+.text-gradient-admin {
+    background: var(--admin-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-teacher {
+    background: var(--teacher-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.text-gradient-student {
+    background: var(--student-bg);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.shadow-soft {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-xl {
+    border-radius: 12px;
+}
+
